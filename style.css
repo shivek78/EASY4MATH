@@ -1,0 +1,405 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+  
+  
+  
+  nav {
+    height: 50px;
+    width: auto;
+    background-color:rgb(186, 129, 13);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    border-bottom: 2px solid #de1111;
+    box-shadow: 0px 0px 0.5rem 5px;
+  }
+  
+  .logo {
+    font-size: 2vw;
+    font-weight: 900;
+    letter-spacing: 0.2vw;
+    text-shadow: 1px 1px 1px;
+    animation: sidein 1s linear 0s 1 alternate;
+    color: #ffffff;
+  }
+  
+  .nav-menu {
+    width: fit-content;
+    height: 12vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    animation: sidein 5s linear 0s 1 alternate;
+  }
+  
+  .nav-menu a {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 8vw;
+    height: 6vh;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1.5vw;
+    font-weight: 300;
+    letter-spacing: 0.2vw;
+    text-shadow: 1px 1px 1px #000;
+    margin: 1vw;
+    color: #fff;
+    box-shadow: 1px 1px 2px 1px rgb(11, 11, 11);
+  }
+  
+  .menubtn,
+  .closebtn {
+    display: none;
+    font-size: 1.6rem;
+    border: none;
+    font-weight: 700;
+    color: #fff;
+  }
+  
+  @keyframes sidein {
+    from {
+      margin-left: 100%;
+    }
+  
+    to {
+      margin-left: 0px;
+    }
+  }
+  
+  .nav-menu a:hover {
+    animation: rotate 3s linear 0s 2 alternate;
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: skew(20deg);
+      box-shadow: 1px 1px 1px 3px lightslategray;
+      filter: drop-shadow(1px 1px 2rem #fff);
+      border: none;
+      border-radius: 8px;
+    }
+  
+    to {
+      transform: rotate(60deg);
+      box-shadow: 1px 1px 1px 3px #fff;
+      filter: drop-shadow(1px 1px 2rem red);
+      border: none;
+      border-radius: 8px;
+    }
+  }
+ 
+#one{
+  background-image: url(square.png);
+  padding: 20px;
+  margin: 20px;
+  height: 200px;
+   width: 250px;
+  
+border-color: black;
+    border-style: solid;
+    display: inline-block;
+   
+    background-size: cover;
+
+  }
+
+button{
+  border-radius: 25%;
+  height: 30px;
+  width: 100px;
+  background-attachment: scroll;
+  margin-top: 137px;
+  margin-left: 50px;
+
+}
+button:hover{
+  background-color: red;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+#two{
+  background-image: url(Oval.png);
+padding: 20px;
+  margin: 20px;
+  height: 200px;
+   width: 250px;
+  
+border-color: black;
+    border-style: solid;
+    display: inline-block;
+   
+    background-size: cover;
+
+
+
+}
+#three{
+  background-image: url(circle.png);
+padding: 20px;
+  margin: 20px;
+  height: 200px;
+   width: 250px;
+  
+border-color: black;
+    border-style: solid;
+    display: inline-block;
+   
+    background-size: cover;
+
+
+
+}
+#four{
+  background-image: url(Semicircle.png);
+padding: 20px;
+  margin: 20px;
+  height: 200px;
+   width: 250px;
+  
+border-color: black;
+    border-style: solid;
+    display: inline-block;
+   
+    background-size: cover;
+
+
+
+}
+#five{
+  background-image: url(Triangle.png);
+padding: 20px;
+  margin: 20px;
+  height: 200px;
+   width: 250px;
+  
+border-color: black;
+    border-style: solid;
+    display: inline-block;
+   
+    background-size: cover;
+
+
+
+}
+/*#six{
+  background-image: url();
+padding: 20px;
+  margin: 20px;
+  height: 200px;
+   width: 250px;
+  
+border-color: black;
+    border-style: solid;
+    display: inline-block;
+   
+    background-size: cover;
+
+
+
+}*/
+#seven{
+  background-image: url(rectangle.png);
+padding: 20px;
+  margin: 20px;
+  height: 200px;
+   width: 250px;
+  
+border-color: black;
+    border-style: solid;
+    display: inline-block;
+   
+    background-size: cover;
+
+
+
+}
+#eight{
+  background-image: url(parellogram.png);
+padding: 20px;
+  margin: 20px;
+  height: 200px;
+   width: 250px;
+  
+border-color: black;
+    border-style: solid;
+    display: inline-block;
+   
+    background-size: cover;
+
+
+
+}
+#nine{
+  background-image: url(rhombus.png);
+padding: 20px;
+  margin: 20px;
+  height: 200px;
+   width: 250px;
+  
+border-color: black;
+    border-style: solid;
+    display: inline-block;
+   
+    background-size: cover;
+
+
+
+}
+#ten{
+  background-image: url(pentagon.png);
+padding: 20px;
+  margin: 20px;
+  height: 200px;
+   width: 250px;
+  
+border-color: black;
+    border-style: solid;
+    display: inline-block;
+   
+    background-size: cover;
+
+
+
+}
+#tenone{
+  background-image: url(hexagon.png);
+padding: 20px;
+  margin: 20px;
+  height: 200px;
+   width: 250px;
+  
+border-color: black;
+    border-style: solid;
+    display: inline-block;
+   
+    background-size: cover;
+
+
+
+}
+#tentwo{
+  background-image: url(octagon.png);
+padding: 20px;
+  margin: 20px;
+  height: 200px;
+   width: 250px;
+  
+border-color: black;
+    border-style: solid;
+    display: inline-block;
+   
+    background-size: cover;
+
+
+
+}
+#tenthree{
+  background-image: url(cube.png);
+padding: 20px;
+  margin: 20px;
+  height: 200px;
+   width: 250px;
+  
+border-color: black;
+    border-style: solid;
+    display: inline-block;
+   
+    background-size: cover;
+
+
+
+}
+#tenfour{
+  background-image: url(cuboid.png);
+padding: 20px;
+  margin: 20px;
+  height: 200px;
+   width: 250px;
+  
+border-color: black;
+    border-style: solid;
+    display: inline-block;
+   
+    background-size: cover;
+
+
+
+}
+#tenfive{
+  background-image: url(cone.png);
+padding: 20px;
+  margin: 20px;
+  height: 200px;
+   width: 250px;
+  
+border-color: black;
+    border-style: solid;
+    display: inline-block;
+   
+    background-size: cover;
+
+
+
+}
+#ten1{
+  background-image: url(cylinder.png);
+padding: 20px;
+  margin: 20px;
+  height: 200px;
+   width: 250px;
+  
+border-color: black;
+    border-style: solid;
+    display: inline-block;
+   
+    background-size: cover;
+
+
+
+}
+#tenseven{
+  background-image: url(sphere.png);
+padding: 20px;
+  margin: 20px;
+  height: 200px;
+   width: 250px;
+  
+border-color: black;
+    border-style: solid;
+    display: inline-block;
+   
+    background-size: cover;
+
+
+
+}
+
+#teneight{
+  background-image: url(q.png);
+padding: 20px;
+  margin: 20px;
+  height: 200px;
+   width: 250px;
+  
+border-color: black;
+    border-style: solid;
+    display: inline-block;
+   
+    background-size: cover;
+
+
+
+}
+

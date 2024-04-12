@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EASY2math</title>
+ 
+  <link rel="stylesheet" href="/css/background.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<style>
+
+.white_bg {
+    background-color: rgb(230, 11, 11);
+    color: rgb(34, 17, 18);
+}
+
+.nav_white {
+    background-color: rgb(73, 66, 66);
+    color: rgb(158, 235, 17);
+}
+
+.black_bg {
+    background-color: rgb(17, 16, 16);
+    color: rgb(214, 224, 158);
+}
+
+.nav_black {
+    font-family: 'Dancing Script', cursive;
+    background-color: rgb(10, 11, 11);
+    color: rgb(255, 255, 255);
+}
+.white_bg {
+    background-color: rgb(207, 196, 196);
+    color: rgb(34, 17, 18);
+}
+
+.nav_white {
+    background-color: rgb(73, 66, 66);
+    color: rgb(158, 235, 17);
+}
+
+.black_bg {
+    background-color: rgb(17, 16, 16);
+    color: rgb(214, 224, 158);
+}
+
+.nav_black {
+    font-family: 'Dancing Script', cursive;
+    background-color: rgb(4 125 177);
+    color: rgb(255, 255, 255);
+}
+
+.flex_box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-size: 25px;
+}
+
+.top_height {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 50px;
+}
+.top_height2 {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 100px;
+    left: 10px;
+}
+.margin{
+    margin: 50px;
+}
+
+.box{
+    width: 75%;
+    margin: auto;
+    background-color: yellowgreen;
+    color: black;
+    height: 300px;
+}
+
+.middle{
+    width: 80%;
+    margin: auto;
+}
+
+.box1{
+    width: 20%;
+    margin-top: 50px;
+    height: 100vh;
+    background-color: rgb(132, 136, 125);
+    border: 5px solid yellowgreen;
+    border-radius: 30px;
+}
+.box2{
+    width: 70%;
+    height: 100vh;
+    border-radius: 30px;
+    margin-top: 50px;
+    background-color: rgb(132, 136, 125);
+    border: 5px solid yellowgreen;
+    /* visibility: hidden; */
+}
+
+.slip{
+    height: 70px;
+    width: 90%;
+    margin: 13px;
+    background-color: rgb(27, 27, 27);
+}
+
+.white_box{
+    background-color: white;
+    padding: 10px;
+    width: 135px;
+    font-size: 14px;
+}
+
+.home_box{
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px;
+    height: 300px;
+    width: 330px;
+    background-color: rgba(157, 47, 56, 0.852);
+    border: 4px solid rgb(0, 0, 0);
+    border-radius: 19px;
+}
+.image{
+    /* padding: 10px; */
+    margin: auto;
+    display: block;
+    height: 200px;
+    width: 250px;
+}
+.flex_c{
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+.button{
+    color: black;
+    background-color: #b8e469;
+    width: 300px;
+    margin: auto;
+    border:2px solid black;
+    border-radius: 10px;
+    font-family: 'Karantina', cursive;
+}
+
+.equation_box{
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    flex-direction: column;
+    margin: auto;
+    height: 600px;
+    width: 80%;
+    background-color: rgb(115 179 255);
+    border: 4px solid rgb(0, 0, 0);
+    border-radius: 19px;
+}
+.btn{
+    text-align: center;
+    display: block;
+    margin: auto;
+    width: 100px;
+}
+.answerh{
+    position: relative;
+    color: rgb(97, 13, 13);
+    top: -60px;
+}
+.answerph{
+    position: relative;
+    color: rgb(97, 13, 13);
+    top: -130px;
+}
+
+button{
+    background-color: white;
+    padding: 5px;
+    height: 40px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.boxb{
+    background-color: white;
+    padding: 5px;
+    height: 40px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px solid rgb(78, 76, 76);
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* background-image: url('/img/background.jpg'); */
+}
+
+li {
+    list-style: none;
+}
+
+nav{
+    width: 100%;
+    /* position:fixed; */
+    z-index: +5;
+    margin: 0;
+    padding: 0;
+}
+
+#navitems {
+    display: flex;
+    height: 50px;
+    font-size: large;
+    justify-content: space-around;
+}
+
+.navitem {
+    margin-top: 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.head {
+    margin: 0;
+    padding: 30px;
+    width: 100%;
+    height: 300px;
+    background-color: black;
+    background: url('/img/backgroundhead.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.2;
+}
+
+
+
+</style>
+<body  id="body">
+  <nav class="nav_black" id="navbar">
+    <ul id="navitems">
+      <li class="navitem"> <a class="nav_black" href="index.html">HOME</a> </li>
+      
+    </ul>
+  </nav>
+  <br><br><br><br>
+    <div class="input equation_box margin box">
+        <h2>let's your equation is ax<sup>2</sup>+bx+c=0 then enter respective constants </h2>
+        <input style="height: 35px;" type="number" name="" placeholder="Enter constant a" id="input3">
+        <input style="height: 35px;" type="number" name="" placeholder="Enter constant b" id="input4">
+        <input style="height: 35px;" type="number" name="" placeholder="Enter constant c" id="input5">
+        <div class="flex_box">
+        <button class="btn" onclick="calculateroot()" style="background-color: white; margin: 10px;">Calculate</button>
+      </div>
+        <div class="answerh flex_box">
+            <div id="output1" class="flex_box top_height">Root 1ST</div>
+            <div id="output2" class="flex_box top_height">Root 2ND</div>
+        </div>
+    </div>
+<br><br><br>
+    <script src="index.js"></script>
+</body>
+
+</html>

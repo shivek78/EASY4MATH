@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semicircle Area and Circumference Calculator</title>
+</head>
+<body style="background-color: darkslategrey; color: white; font-family: Arial, sans-serif;">
+    <div>
+        <h1>Semicircle Area and Circumference Calculator</h1>
+        <label for="radius">Enter the radius (in cm):</label>
+        <input type="number" id="radius" placeholder="Enter radius">
+        <button onclick="calculateSemicircle()">Calculate</button>
+        <div id="result"></div>
+    </div>
+    <div id="semicircle"></div>
+    <script>
+        function calculateSemicircle() {
+            const radius = parseFloat(document.getElementById('radius').value);
+            if (isNaN(radius)) {
+                document.getElementById('result').innerHTML = 'Please enter a valid radius.';
+                return;
+            }
+            const semicircleArea = (Math.PI * radius ** 2) / 2;
+            const semicircleCircumference = Math.PI * radius;
+            document.getElementById('result').innerHTML = `
+                <p>Semicircle Area: <strong>${semicircleArea.toFixed(2)} cm²</strong></p>
+                <p>Semicircle Circumference: <strong>${semicircleCircumference.toFixed(2)} cm</strong></p>
+            `;
+        }
+    </script>
+
+    <style>
+        /* You can adjust the styling here if needed */
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input {
+            width: 100px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #0074D9;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        #semicircle {
+  width: 400px;
+  height: 200px;
+  background: linear-gradient(70deg, #C400FF 0%, #009EB2 100%);
+  transform-origin: top center;
+  border-bottom-left-radius: 400px;
+  border-bottom-right-radius: 400px;
+  cursor: grab;
+}
+
+/*only for general style*/* 
+{
+  margin: 0;
+  padding: 0;
+}
+
+html {
+    ma
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+
+        
+    </style>
+</body>
+</html>

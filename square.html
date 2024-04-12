@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Sphere Area and Volume Calculator</title>
+
+   
+</head>
+<body style="background-color: darkslategrey;">
+    <header>
+
+        <h1>Square </h1>
+
+    </header>
+
+
+<br>
+
+
+
+    <div>Area and Volume Calculator</div>
+
+
+
+    
+    <div id="content">
+        <label for="radius">Enter the radius (in cm):</label>
+        <input type="number" id="radius" placeholder="Enter radius">
+        <input type="number" id="sideLength" placeholder="Enter side length">
+        <div id="resultSquare"></div>
+        <br>
+        <br>
+        <button onclick="calculateSquare()" style="align-items: center; margin-left: 20%;">Calculate</button>
+
+        <div id="result"></div>
+
+
+
+
+
+        
+       
+
+
+
+       
+
+
+    
+
+
+
+        <script>
+            function calculateSquare() {
+                const sideLength = parseFloat(document.getElementById('sideLength').value);
+                if (isNaN(sideLength)) {
+                    document.getElementById('resultSquare').innerHTML = 'Please enter a valid side length.';
+                    return;
+                }
+                const area = sideLength ** 2;
+                const volume = sideLength ** 3;
+                document.getElementById('resultSquare').innerHTML = `
+                    <p>Surface Area: <strong>${area.toFixed(2)} cm²</strong></p>
+                    <p>Volume: <strong>${volume.toFixed(2)} cm³</strong></p>
+                `;
+            }
+        </script>
+        
+
+
+
+        
+            <style>
+                .square {
+                    width: 25px;
+                    height: 25px;
+                    background-color: black;
+                    position: absolute;
+                    left: 390px;
+                    top: 200px;
+                    transition: all 2.5s ease;
+                }
+            </style>
+        </head>
+        
+        <body>
+            <div class="square"></div>
+           
+        
+            <script>
+                function moveSquare() {
+                    var square = document.querySelector('.square');
+                    var maxX = window.innerWidth - square.offsetWidth;
+                    var maxY = window.innerHeight - square.offsetHeight;
+        
+                    var newX = Math.floor(Math.random() * maxX);
+                    var newY = Math.floor(Math.random() * maxY);
+        
+                    var deltaX = newX - parseInt(square.style.left, 10);
+                    var deltaY = newY - parseInt(square.style.top, 10);
+                    var angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI);
+        
+                    square.style.transform = 'rotate(' + angle + 'deg)';
+                    square.style.left = newX + 'px';
+                    square.style.top = newY + 'px';
+                }
+        
+                function feedSquare() {
+                    var square = document.querySelector('.square');
+                    square.style.width = '35px'; // Increase the width of the square
+                    square.style.height = '35px'; // Increase the height of the square
+        
+                    setTimeout(function () {
+                        square.style.width = '25px'; // Reset the width of the square after 10-30 seconds
+                        square.style.height = '25px'; // Reset the height of the square after 10-30 seconds
+                    }, Math.floor(Math.random() * 21000) + 10000); // Random time between 10-30 seconds (in milliseconds)
+                }
+        
+                setInterval(moveSquare, 2000);
+            </script>
+        </body>
+        
+        </html>
+        
+ 
+</body>
+</html>

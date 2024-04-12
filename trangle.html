@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle Area and Perimeter Calculator</title>
+</head>
+<body style="background-color: darkslategrey; color: white; font-family: Arial, sans-serif;">
+    <div>
+        <h1>Triangle Area and Perimeter Calculator</h1>
+        <label for="side1">Enter side 1 (in cm):</label>
+        <input type="number" id="side1" placeholder="Enter side 1">
+        <label for="side2">Enter side 2 (in cm):</label>
+        <input type="number" id="side2" placeholder="Enter side 2">
+        <label for="side3">Enter side 3 (in cm):</label>
+        <input type="number" id="side3" placeholder="Enter side 3">
+        <button onclick="calculateTriangle()">Calculate</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function calculateTriangle() {
+            const side1 = parseFloat(document.getElementById('side1').value);
+            const side2 = parseFloat(document.getElementById('side2').value);
+            const side3 = parseFloat(document.getElementById('side3').value);
+
+            if (isNaN(side1) || isNaN(side2) || isNaN(side3)) {
+                document.getElementById('result').innerHTML = 'Please enter valid side lengths.';
+                return;
+            }
+
+            const s = (side1 + side2 + side3) / 2;
+            const area = Math.sqrt(s * (s - side1) * (s - side2) * (s - side3));
+            const perimeter = side1 + side2 + side3;
+
+            document.getElementById('result').innerHTML = `
+                <p>Area: <strong>${area.toFixed(2)} cm²</strong></p>
+                <p>Perimeter: <strong>${perimeter.toFixed(2)} cm</strong></p>
+            `;
+        }
+    </script>
+
+    <style>
+        /* You can adjust the styling here if needed */
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input {
+            width: 100px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #0074D9;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</body>
+</html>

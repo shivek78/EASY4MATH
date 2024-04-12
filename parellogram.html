@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parabola Properties Calculator</title>
+    <style>
+        /* You can adjust the styling here if needed */
+        body {
+            background-color: darkslategrey;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input {
+            width: 100px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #0074D9;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Parabola Properties Calculator</h1>
+        <label for="distance">Enter the distance from the vertex to the focus (p, in cm):</label>
+        <input type="number" id="distance" placeholder="Enter p">
+        <button onclick="calculateParabola()">Calculate</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function calculateParabola() {
+            const p = parseFloat(document.getElementById('distance').value);
+
+            if (isNaN(p)) {
+                document.getElementById('result').innerHTML = 'Please enter a valid distance.';
+                return;
+            }
+
+            const area = (2 / 3) * p;
+            const perimeter = 4 * p;
+            const volume = (1 / 2) * Math.PI * p ** 2;
+
+            document.getElementById('result').innerHTML = `
+                <p>Area of the parabola: <strong>${area.toFixed(2)} cm²</strong></p>
+                <p>Perimeter of the parabola: <strong>${perimeter.toFixed(2)} cm</strong></p>
+                <p>Volume of the parabola: <strong>${volume.toFixed(2)} cm³</strong></p>
+            `;
+        }
+    </script>
+</body>
+</html>

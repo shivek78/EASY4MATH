@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cylinder Properties Calculator</title>
+    <style>
+        /* You can adjust the styling here if needed */
+        body {
+            background-color: darkslategrey;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input {
+            width: 100px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #0074D9;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Cylinder Properties Calculator</h1>
+        <label for="radius">Enter the radius (in cm):</label>
+        <input type="number" id="radius" placeholder="Enter radius">
+        <label for="height">Enter the height (in cm):</label>
+        <input type="number" id="height" placeholder="Enter height">
+        <button onclick="calculateCylinder()">Calculate</button>
+        <div id="result"></div>
+    </div>
+
+    <!-- Example image of a cylinder -->
+    <img src="https://via.placeholder.com/200x200" alt="Cylinder" style="display: block; margin: 20px auto;">
+
+    <script>
+        function calculateCylinder() {
+            const radius = parseFloat(document.getElementById('radius').value);
+            const height = parseFloat(document.getElementById('height').value);
+
+            if (isNaN(radius) || isNaN(height)) {
+                document.getElementById('result').innerHTML = 'Please enter valid dimensions.';
+                return;
+            }
+
+            const slantHeight = Math.sqrt(radius**2 + height**2);
+            const surfaceArea = 2 * Math.PI * radius * (radius + height);
+            const volume = Math.PI * radius**2 * height;
+            const lateralSurfaceArea = 2 * Math.PI * radius * height;
+
+            document.getElementById('result').innerHTML = `
+                <p>Slant Height of the Cylinder: <strong>${slantHeight.toFixed(2)} cm</strong></p>
+                <p>Surface Area of the Cylinder: <strong>${surfaceArea.toFixed(2)} cm²</strong></p>
+                <p>Volume of the Cylinder: <strong>${volume.toFixed(2)} cm³</strong></p>
+                <p>Lateral Surface Area of the Cylinder: <strong>${lateralSurfaceArea.toFixed(2)} cm²</strong></p>
+            `;
+        }
+    </script>
+</body>
+</html>

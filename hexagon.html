@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hexagon Properties Calculator</title>
+    <style>
+        /* You can adjust the styling here if needed */
+        body {
+            background-color: darkslategrey;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input {
+            width: 100px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #0074D9;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Hexagon Properties Calculator</h1>
+        <label for="side">Enter the side length (in cm):</label>
+        <input type="number" id="side" placeholder="Enter side length">
+        <button onclick="calculateHexagon()">Calculate</button>
+        <div id="result"></div>
+    </div>
+
+    <!-- Example image of a hexagon -->
+    <img src="https://via.placeholder.com/200x200" alt="Hexagon" style="display: block; margin: 20px auto;">
+
+    <script>
+        function calculateHexagon() {
+            const side = parseFloat(document.getElementById('side').value);
+
+            if (isNaN(side)) {
+                document.getElementById('result').innerHTML = 'Please enter a valid side length.';
+                return;
+            }
+
+            const area = (3 * Math.sqrt(3) / 2) * side ** 2;
+            const perimeter = 6 * side;
+            const volume = 0; // Hexagon is a 2D shape, so volume is zero.
+
+            document.getElementById('result').innerHTML = `
+                <p>Area of the hexagon: <strong>${area.toFixed(2)} cm²</strong></p>
+                <p>Perimeter of the hexagon: <strong>${perimeter.toFixed(2)} cm</strong></p>
+                <p>Volume of the hexagon: <strong>${volume.toFixed(2)} cm³</strong></p>
+            `;
+        }
+    </script>
+</body>
+</html>

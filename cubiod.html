@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuboid Properties Calculator</title>
+    <style>
+        /* You can adjust the styling here if needed */
+        body {
+            background-color: darkslategrey;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input {
+            width: 100px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #0074D9;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Cuboid Properties Calculator</h1>
+        <label for="length">Enter the length (in cm):</label>
+        <input type="number" id="length" placeholder="Enter length">
+        <label for="width">Enter the width (in cm):</label>
+        <input type="number" id="width" placeholder="Enter width">
+        <label for="height">Enter the height (in cm):</label>
+        <input type="number" id="height" placeholder="Enter height">
+        <button onclick="calculateCuboid()">Calculate</button>
+        <div id="result"></div>
+    </div>
+
+    <!-- Example image of a cuboid -->
+    <img src="https://via.placeholder.com/200x150" alt="Cuboid" style="display: block; margin: 20px auto;">
+
+    <script>
+        function calculateCuboid() {
+            const length = parseFloat(document.getElementById('length').value);
+            const width = parseFloat(document.getElementById('width').value);
+            const height = parseFloat(document.getElementById('height').value);
+
+            if (isNaN(length) || isNaN(width) || isNaN(height)) {
+                document.getElementById('result').innerHTML = 'Please enter valid dimensions.';
+                return;
+            }
+
+            const volume = length * width * height;
+            const surfaceArea = 2 * (length * width + width * height + height * length);
+            const perimeter = 4 * (length + width + height);
+
+            document.getElementById('result').innerHTML = `
+                <p>Volume of the cuboid: <strong>${volume.toFixed(2)} cm³</strong></p>
+                <p>Surface area of the cuboid: <strong>${surfaceArea.toFixed(2)} cm²</strong></p>
+                <p>Perimeter of the cuboid: <strong>${perimeter.toFixed(2)} cm</strong></p>
+            `;
+        }
+    </script>
+</body>
+</html>

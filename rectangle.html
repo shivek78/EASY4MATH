@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangle Area and Perimeter Calculator</title>
+</head>
+<body style="background-color: darkslategrey; color: white; font-family: Arial, sans-serif;">
+    <div>
+        <h1>Rectangle Area and Perimeter Calculator</h1>
+        <label for="length">Enter the length (in cm):</label>
+        <input type="number" id="length" placeholder="Enter length">
+        <label for="width">Enter the width (in cm):</label>
+        <input type="number" id="width" placeholder="Enter width">
+        <button onclick="calculateRectangle()">Calculate</button>
+        <div id="result"></div>
+    </div>
+
+    <!-- Example image of a rectangle -->
+    <img src="https://via.placeholder.com/200x100" alt="Rectangle" style="display: block; margin: 20px auto;">
+
+    <script>
+        function calculateRectangle() {
+            const length = parseFloat(document.getElementById('length').value);
+            const width = parseFloat(document.getElementById('width').value);
+
+            if (isNaN(length) || isNaN(width)) {
+                document.getElementById('result').innerHTML = 'Please enter valid dimensions.';
+                return;
+            }
+
+            const area = length * width;
+            const perimeter = 2 * (length + width);
+
+            document.getElementById('result').innerHTML = `
+                <p>Area: <strong>${area.toFixed(2)} cm²</strong></p>
+                <p>Perimeter: <strong>${perimeter.toFixed(2)} cm</strong></p>
+            `;
+        }
+    </script>
+
+    <style>
+        /* You can adjust the styling here if needed */
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input {
+            width: 100px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #0074D9;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</body>
+</html>

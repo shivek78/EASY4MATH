@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+
+    
+body {
+    margin: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    height: 100vh;
+}
+
+
+
+#content {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    margin-top: 10px;
+}
+
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cube Area and Volume Calculator</title>
+    <link rel="stylesheet" href="cube.css">
+</head>
+<body style="background-color: darkslategrey;">
+    <div class="oval-image"></div>
+
+
+
+    <div class="oval-image"></div>
+
+
+
+    <div id="content">
+        <label for="radiusX">Enter the X-axis radius (in cm):</label>
+        <input type="number" id="radiusX" placeholder="Enter X-axis radius">
+        <label for="radiusY">Enter the Y-axis radius (in cm):</label>
+        <input type="number" id="radiusY" placeholder="Enter Y-axis radius">
+        <button onclick="calculateOval()">Calculate</button>
+        <div id="result"></div>
+    </div>
+<img src="images.jpg"  height="400px" width="300px"    style="margin-top: 500px; p">
+
+
+
+
+
+
+
+
+
+    <script >
+      function calculateOval() {
+    const radiusX = parseFloat(document.getElementById('radiusX').value);
+    const radiusY = parseFloat(document.getElementById('radiusY').value);
+
+    if (isNaN(radiusX) || isNaN(radiusY)) {
+        document.getElementById('result').innerHTML = 'Please enter valid radii.';
+        return;
+    }
+
+    const area = Math.PI * radiusX * radiusY;
+    const volume = (4 / 3) * Math.PI * radiusX * radiusY * radiusY;
+
+    document.getElementById('result').innerHTML = `
+        <p>Surface Area: <strong>${area.toFixed(2)} cm²</strong></p>
+        <p>Volume: <strong>${volume.toFixed(2)} cm³</strong></p>
+    `;
+}
+
+
+    </script>
+    <script src="cube.js" async defer></script>
+</body>
+</html>

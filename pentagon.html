@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pentagon Properties Calculator</title>
+    <style>
+        /* You can adjust the styling here if needed */
+        body {
+            background-color: darkslategrey;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input {
+            width: 100px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #0074D9;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Pentagon Properties Calculator</h1>
+        <label for="side">Enter the side length (in cm):</label>
+        <input type="number" id="side" placeholder="Enter side length">
+        <button onclick="calculatePentagon()">Calculate</button>
+        <div id="result"></div>
+    </div>
+
+    <!-- Image of a pentagon -->
+    <img src="https://via.placeholder.com/200x200" alt="Pentagon" style="display: block; margin: 20px auto;">
+
+    <script>
+        function calculatePentagon() {
+            const side = parseFloat(document.getElementById('side').value);
+
+            if (isNaN(side)) {
+                document.getElementById('result').innerHTML = 'Please enter a valid side length.';
+                return;
+            }
+
+            const area = (5 / 4) * side ** 2 * Math.tan(Math.PI / 5);
+            const perimeter = 5 * side;
+            const volume = 0; // Pentagon is a 2D shape, so volume is zero.
+
+            document.getElementById('result').innerHTML = `
+                <p>Area of the pentagon: <strong>${area.toFixed(2)} cm²</strong></p>
+                <p>Perimeter of the pentagon: <strong>${perimeter.toFixed(2)} cm</strong></p>
+                <p>Volume of the pentagon: <strong>${volume.toFixed(2)} cm³</strong></p>
+            `;
+        }
+    </script>
+</body>
+</html>
